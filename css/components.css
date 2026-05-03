@@ -1,0 +1,23 @@
+.btn {
+    border: 1px solid;
+    color: var(--text);
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-primary{
+    background: var(--green);
+    border: none;
+}
+.btn-secondary{
+    border: none;
+    background: var(--accent);
+}
+
+.btn-danger{
+    background: var(--red);
+    border: none;
+}

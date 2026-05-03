@@ -1,0 +1,29 @@
+/* VARIAVEIS */
+
+:root{
+    --bg: #0f172a;
+    --bg-card: #1e293b;
+    --text: #e2e8f0;
+    --green: #22c55e;
+    --red: #ef4444;
+    --accent: #38bdf8;
+    
+    /* bordas */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 24px;
+    
+    /* glass */
+    --blass-blur: blur(10px);
+    --glass-bg: rgba(15, 23, 42, 0.231);
+    --glass-card: rgba(30, 41, 59, 0.285);
+}
+
+.ligth-theme{
+    --bg: #e2e8f0;
+    --bg-card: #28313f0a;
+    --text: #0f172a;
+    --green: #22c55eb1;
+    --red: #ef4444b9;
+    --accent: #38bff8a5;
+}

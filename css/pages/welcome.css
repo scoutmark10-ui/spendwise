@@ -1,0 +1,96 @@
+.welcome{
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.welcome-header{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    text-align: center;
+    border-radius: 0 0 24px 24px;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.welcome-cards, .about-work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+.welcome-cards div{
+    text-align: center;
+    background-color: var(--bg-card);
+    padding: 40px;
+    backdrop-filter: var(--glass-blur);
+    width: min(300px, 100%);
+    min-height: 160px;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+.welcome-cards div:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 5px rgba(139, 139, 139, 0.276);
+}
+
+.beneficios h2{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.welcome-icon{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.about-work .card {
+    list-style: none;
+    text-align: center;
+    background-color: var(--bg-card);
+    padding: 40px;
+    backdrop-filter: var(--glass-blur);
+    width: min(300px, 100%);
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 640px) {
+    .welcome-cards,
+    .about-work {
+        width: 100%;
+        padding: 20px 12px;
+        gap: 12px;
+    }
+
+    .welcome-cards div,
+    .about-work .card {
+        width: 100%;
+        padding: 24px;
+    }
+}
+
+.welcome-footer {
+    background-color: var(--bg);
+    padding: 20px;
+    margin-top: 60px;
+    border-top: 1px solid #1e293b;
+    text-align: center;
+    color: #64748b;
+}
