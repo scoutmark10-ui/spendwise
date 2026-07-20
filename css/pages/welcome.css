@@ -1,96 +1,209 @@
+/* ========= WELCOME ========= */
+
 .welcome{
+    min-height: 100vh;
     background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: var(--text);
 }
+
+/* ========= HEADER ========= */
 
 .welcome-header{
-    max-width: 90%;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 60px 30px;
     background: linear-gradient(135deg, #1e293b, #0f172a);
     text-align: center;
-    border-radius: 0 0 24px 24px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
 }
 
-.welcome-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
+.welcome-header h1{
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
 }
 
-.welcome-cards, .about-work {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 40px;
+.welcome-header p{
+    max-width: 600px;
+    margin: 20px auto 35px;
+    color: #cbd5e1;
+    line-height: 1.7;
 }
 
-.welcome-cards div{
+/* ========= MAIN ========= */
+
+.welcome-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.beneficios,
+.about-work{
+    margin-bottom: 70px;
+}
+
+.beneficios h2,
+.about-work h2{
     text-align: center;
-    background-color: var(--bg-card);
-    padding: 40px;
+    margin-bottom: 35px;
+    font-size: 2rem;
+}
+
+/* ========= CARDS ========= */
+
+.welcome-cards{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.welcome-cards .card{
+    background: var(--bg-card);
     backdrop-filter: var(--glass-blur);
-    width: min(300px, 100%);
-    min-height: 160px;
+
+    width: min(320px,100%);
+    min-height: 190px;
+
+    padding: 35px 30px;
+
     border-radius: var(--radius-sm);
-    transition: all 0.3s ease;
-}
 
-.welcome-cards div:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 0 5px rgba(139, 139, 139, 0.276);
-}
-
-.beneficios h2{
     text-align: center;
-    margin-top: 25px;
+
+    border: 1px solid rgba(255,255,255,.05);
+
+    transition: .35s;
 }
+
+.welcome-cards .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.30);
+}
+
+/* ========= ÍCONES ========= */
 
 .welcome-icon{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
+    width:70px;
+    height:70px;
+
+    margin:0 auto 20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:32px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:var(--primary);
 }
 
-.about-work .card {
-    list-style: none;
-    text-align: center;
-    background-color: var(--bg-card);
-    padding: 40px;
-    backdrop-filter: var(--glass-blur);
-    width: min(300px, 100%);
-    border-radius: var(--radius-sm);
-    transition: all 0.3s ease;
+.welcome-cards p{
+    line-height:1.6;
 }
 
-@media (max-width: 640px) {
+/* ========= COMO FUNCIONA ========= */
+
+.about-work ol{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    list-style:none;
+
+    padding:0;
+    margin:0;
+}
+
+.about-work .card{
+    width:min(320px,100%);
+
+    padding:35px;
+
+    text-align:center;
+
+    background:var(--bg-card);
+
+    border-radius:var(--radius-sm);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.35s;
+}
+
+.about-work .card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.30);
+}
+
+/* ========= BOTÃO ========= */
+
+.btn{
+    display:inline-block;
+
+    padding:15px 30px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* ========= FOOTER ========= */
+
+.welcome-footer{
+    margin-top:40px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    color:#94a3b8;
+}
+
+/* ========= MOBILE ========= */
+
+@media (max-width:768px){
+
+    .welcome-header{
+        padding:45px 20px;
+        border-radius:0 0 25px 25px;
+    }
+
+    .welcome-container{
+        padding:40px 15px;
+    }
+
     .welcome-cards,
-    .about-work {
-        width: 100%;
-        padding: 20px 12px;
-        gap: 12px;
+    .about-work ol{
+        gap:15px;
     }
 
-    .welcome-cards div,
-    .about-work .card {
-        width: 100%;
-        padding: 24px;
+    .welcome-cards .card,
+    .about-work .card{
+        width:100%;
+        padding:25px;
     }
-}
 
-.welcome-footer {
-    background-color: var(--bg);
-    padding: 20px;
-    margin-top: 60px;
-    border-top: 1px solid #1e293b;
-    text-align: center;
-    color: #64748b;
+    .beneficios h2,
+    .about-work h2{
+        font-size:1.6rem;
+    }
 }
